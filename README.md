@@ -15,9 +15,12 @@ $app->on("system.routing.route.create", function(){
 $app->on("system.routing.route.matched", function($route){
     return $route->matched();
 });
-$app->get("hello/:string", function($string){
+$app->get("api/hello/:string", function($string){
     return $string;
 })->constraint(array(':string' => '@email'));
+$app->get("api/hello/:string", function($string){
+    return $string;
+})->constraint(array(':string' => '/^[a-z]$/'));
 
 $app->run();
 ```
