@@ -7,7 +7,7 @@ class RespectRoute extends Route
 
     public function constraint($route_constraint = array())
     {
-       $this->route_constraint = $route_constraint;
+        $this->route_constraint = $route_constraint;
     }
 
     public function getConstraint()
