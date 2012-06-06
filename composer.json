@@ -1,7 +1,7 @@
 {
     "name": "Pupcake/RespectRoute",
     "description": "A route component for Pupcake Framework using Respect/Validation",
-    "keywords": ["microframework", "micro", "framework", "lightweight", "pupcake", "route", "Respect/Validation"],
+    "keywords": ["microframework", "micro", "framework", "lightweight", "Pupcake/Pupcake", "route", "Respect/Validation"],
     "homepage": "https://github.com/superjimpupcake/PupcakeRespectRoute",
     "license": "MIT",
     "authors": [
