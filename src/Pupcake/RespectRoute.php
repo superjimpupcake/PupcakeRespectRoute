@@ -1,7 +1,7 @@
 <?php
 namespace Pupcake;
 
-class RespectRoute extends Pupcake\Route
+class RespectRoute extends Route
 {
     private $route_constraint;
 
