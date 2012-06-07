@@ -39,6 +39,9 @@ class RespectRoute extends Route
                 }
                 else if(is_callable($validator_name)){ //validation callback
                     $matched = $validator_name($params[$token]);
+                    if(!$matched){
+                        break;
+                    }
                 }
             }
         } 
