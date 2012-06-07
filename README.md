@@ -8,6 +8,7 @@ Add Contraints to Pupcake Route using Respect/Validation
 ###Hook up to system.routing.route.create event to return a new Pupcake\RespectRoute instance
 ###For details please see https://github.com/Respect/Validation
 ```php
+<?php
 $app = new Pupcake\Pupcake();
 $app->on("system.routing.route.create", function(){
     return new Pupcake\RespectRoute();
