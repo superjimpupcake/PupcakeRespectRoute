@@ -43,6 +43,13 @@ $app->get("api/domain/:string", function($string){
 })->constraint(array(':string' => '@domain'));
 
 /**
+ * match uppercase
+ */
+$app->get("api/upper/:string", function($string){
+    return $string;
+})->constraint(array(':string' => '@uppercase'));
+
+/**
  * match regular expression
  */
 $app->get("api/oneletter/:string", function($string){
