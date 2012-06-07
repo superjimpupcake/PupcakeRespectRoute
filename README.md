@@ -37,7 +37,7 @@ $app->get("api/prime/:string", function($string){
 /**
  * match domain
  */
-$app->get("api/prime/:string", function($string){
+$app->get("api/domain/:string", function($string){
     return $string;
 })->constraint(array(':string' => '@domain'));
 
