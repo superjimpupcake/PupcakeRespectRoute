@@ -48,5 +48,16 @@ $app->get("api/oneletter/:string", function($string){
     return $string;
 })->constraint(array(':string' => '/^[a-z]$/'));
 
+/**
+ * Advance matching using constraint callback
+ */
+$app->get("api/validate/:token", function($token){
+    return $token;
+})->constraint(array(
+    ':token' => function($value){
+       return Respect\Validation\Validator::date('Y-m-d')->between('1980-02-02', 'now')->validate($value);
+    }
+));
+
 $app->run();
 ```
