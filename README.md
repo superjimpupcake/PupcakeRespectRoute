@@ -5,17 +5,18 @@ Add Contraints to Pupcake Route using Respect/Validation
 
 ##Usage:
 ###Install Pupcake/RespectRoute package via composer
-###Hook up to system.routing.route.create event and system.routing.route.matched to return a new Pupcake\RespectRoute instance
-###For details please see https://github.com/Respect/Validation
+###get service Pupcake\RespectRoute
+###This requires Respect/Valiation package,see https://github.com/Respect/Validation
 ```php
 <?php
+
+//Assiming this is public/index.php and the composer vendor directory is ../vendor
+
+require_once __DIR__.'/../vendor/autoload.php';
+
 $app = new Pupcake\Pupcake();
-$app->on("system.routing.route.create", function(){
-    return new Pupcake\RespectRoute();
-});
-$app->on("system.routing.route.matched", function($route){
-    return $route->matched();
-});
+$app->getService("Pupcake\RespectRoute");
+
 
 /**
  * match email address

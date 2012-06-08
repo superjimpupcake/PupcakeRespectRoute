@@ -1,7 +1,7 @@
 <?php
 namespace Pupcake;
 
-class RespectRoute extends Route
+class RespectHelperRoute extends Route
 {
     private $route_constraint;
 
@@ -46,5 +46,18 @@ class RespectRoute extends Route
             }
         } 
         return $matched;
+    }
+}
+
+class RespectRoute extends Service
+{
+    public function start($app)
+    {
+        $app->on("system.routing.route.create", function(){
+            return new RespectHelperRoute();
+        });
+        $app->on("system.routing.route.matched", function($route){
+            return $route->matched();
+        });
     }
 }
