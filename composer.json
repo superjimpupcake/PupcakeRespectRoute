@@ -18,7 +18,12 @@
     },
     "autoload": {
         "psr-0": {
-            "Pupcake\RespectRoute": "src"
+            "Pupcake/RespectRoute": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
         }
     }
 }
