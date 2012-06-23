@@ -1,6 +1,6 @@
 {
     "name": "Pupcake/RespectRoute",
-    "description": "A service component for Pupcake Framework using Respect/Validation",
+    "description": "A plugin component for Pupcake Framework using Respect/Validation",
     "keywords": ["microframework", "micro", "framework", "lightweight", "Pupcake/Pupcake", "route", "Respect/Validation"],
     "homepage": "https://github.com/superjimpupcake/PupcakeRespectRoute",
     "license": "MIT",
@@ -23,7 +23,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.0.2-dev"
+            "dev-master": "3.0.3-dev"
         }
     }
 }
