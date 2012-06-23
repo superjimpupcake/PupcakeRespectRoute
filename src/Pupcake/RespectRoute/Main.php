@@ -1,15 +1,17 @@
 <?php
-namespace Pupcake;
+namespace Pupcake\RespectRoute;
 
-class RespectRoute extends Service
+use Pupcake;
+
+class Main extends Pupcake\Plugin
 {
-    public function start($config = array())
+    public function load($config = array())
     {
         /**
          * When a route object is being created, we add the constraint method 
          * to it and store the constraint into this route object's storage
          */
-        $this->on("system.routing.route.create", function($event){
+        $this->help("system.routing.route.create", function($event){
             $route = $event->props('route');
             $route->method('constraint', function($constraint) use($route){
                 $route->storageSet('constraint', $constraint);
@@ -21,7 +23,7 @@ class RespectRoute extends Service
          * When a route object is initially matched, we add further checking logic 
          * to make sure the constraint is applying toward the route matching process
          */
-        $this->on("system.routing.route.matched", function($event){
+        $this->help("system.routing.route.matched", function($event){
             $route = $event->props('route');
             $matched = true;
             $constraint = $route->storageGet('constraint');
