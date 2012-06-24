@@ -14,7 +14,8 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "Respect/Validation": "*"
+        "Respect/Validation": "*",
+        "Pupcake/Pupcake":"*"
     },
     "autoload": {
         "psr-0": {
